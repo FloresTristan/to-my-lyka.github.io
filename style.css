@@ -248,3 +248,61 @@ aside p {
     padding-top: 20px;
 	margin-bottom: 1em;
 }
+@media only screen and (max-width: 768px) {
+    body {
+        font-size: 16px; /* Increase font size for better readability on smaller screens */
+    }
+
+    header {
+        height: auto;
+        padding: 20px 0; /* Adjust header padding */
+    }
+
+    header div {
+        padding-bottom: 20px; /* Add some space below header content */
+    }
+
+    #cards {
+        grid-template-columns: 1fr; /* Change card layout to a single column */
+        gap: 20px; /* Increase gap between cards */
+    }
+
+    .card {
+        padding-top: 0; /* Remove top padding from cards */
+    }
+
+    .card__content {
+        grid-template-areas: "img" "text"; /* Stack image on top of text */
+        grid-template-columns: 1fr; /* Change content layout to a single column */
+        padding: 20px; /* Add padding to content */
+    }
+
+    .card__content > div {
+        width: 100%; /* Set text width to 100% */
+        text-align: center; /* Center align text */
+    }
+
+    .card__content > figure {
+        margin-bottom: 20px; /* Add some space below image */
+    }
+
+    aside {
+        width: 80%; /* Make aside width responsive */
+        padding: 20px; /* Adjust padding */
+    }
+}
+
+/* Additional styling for smaller screens */
+@media only screen and (max-width: 480px) {
+    h1 {
+        font-size: 2.5em; /* Decrease header font size */
+    }
+
+    h2 {
+        font-size: 1.8em; /* Decrease subheader font size */
+    }
+
+    aside {
+        width: 90%; /* Further decrease aside width */
+    }
+}
